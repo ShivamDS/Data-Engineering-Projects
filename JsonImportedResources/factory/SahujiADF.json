@@ -1,0 +1,9 @@
+{
+	"name": "SahujiADF",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c6c96bc8-e95a-4583-9536-f67cb3dc1bcb",
+		"tenantId": "02aa9fc1-18bc-4798-a020-e01c854dd434"
+	}
+}
