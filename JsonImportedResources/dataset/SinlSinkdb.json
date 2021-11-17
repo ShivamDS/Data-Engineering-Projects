@@ -1,0 +1,21 @@
+{
+	"name": "SinlSinkdb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SinkAzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "datatable"
+		}
+	}
+}
