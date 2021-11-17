@@ -1,0 +1,20 @@
+{
+	"name": "SourceExcel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "new york taxi multiple sheets.xlsx",
+				"container": "sahublob"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": []
+	}
+}
