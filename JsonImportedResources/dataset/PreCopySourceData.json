@@ -1,5 +1,5 @@
 {
-	"name": "SourceData",
+	"name": "PreCopySourceData",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SourceTaxiDataExcel",
