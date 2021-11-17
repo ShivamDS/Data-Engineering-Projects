@@ -52,7 +52,7 @@
 				]
 			},
 			{
-				"name": "ForEachSheetActivity",
+				"name": "ForEach",
 				"type": "ForEach",
 				"dependsOn": [
 					{
@@ -70,7 +70,7 @@
 					},
 					"activities": [
 						{
-							"name": "CopyEachSheet",
+							"name": "Copy data",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -91,9 +91,7 @@
 									}
 								},
 								"sink": {
-									"type": "AzureSqlSink",
-									"tableOption": "autoCreate",
-									"disableMetricsCollection": false
+									"type": "AzureSqlSink"
 								},
 								"enableStaging": false,
 								"translator": {
@@ -108,13 +106,19 @@
 							"inputs": [
 								{
 									"referenceName": "ExcelCopyDS",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"Sheetname": "@item"
+									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "SinlSinkdb",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"tablename": ", \"Sheet2\", \"Sheet3\", \"Sheet4\", \"Sheet5\""
+									}
 								}
 							]
 						}
