@@ -1,5 +1,5 @@
 {
-	"name": "PreCopyExcelSource",
+	"name": "PreCopyExcelSourceDS",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",

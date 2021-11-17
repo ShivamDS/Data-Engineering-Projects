@@ -1,5 +1,5 @@
 {
-	"name": "SourceExcel",
+	"name": "SourceExcelDS",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
