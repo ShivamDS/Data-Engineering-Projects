@@ -1,5 +1,5 @@
 {
-	"name": "SinkAzureSqlDb",
+	"name": "PreCopySinkAzureSqlDb",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SinkAzureSqlDatabase",
