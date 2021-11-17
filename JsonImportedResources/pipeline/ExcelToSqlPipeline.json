@@ -125,7 +125,13 @@
 		"variables": {
 			"SheetName": {
 				"type": "Array",
-				"defaultValue": "\"Sheet1\""
+				"defaultValue": [
+					"Sheet1",
+					" \"Sheet2\"",
+					" \"Sheet3\"",
+					" \"Sheet4\"",
+					" \"Sheet5\""
+				]
 			}
 		},
 		"annotations": []
