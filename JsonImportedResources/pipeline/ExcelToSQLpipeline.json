@@ -64,6 +64,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@variables('SheetName')",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Copy data2",
@@ -104,13 +108,25 @@
 							"inputs": [
 								{
 									"referenceName": "SourceExcelDS",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"dsSheetName": {
+											"value": "@item().variables('SheetName')",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "SinkSqldbDS",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"TableName": {
+											"value": "@item().variables('SheetName')",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
