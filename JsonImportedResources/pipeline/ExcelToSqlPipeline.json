@@ -126,11 +126,11 @@
 			"SheetName": {
 				"type": "Array",
 				"defaultValue": [
-					"1",
-					" \"2\"",
-					" \"3\"",
-					" \"4\"",
-					" \"5'"
+					"Sheet1",
+					" \"Sheet2\"",
+					" \"Sheet3\"",
+					" \"Sheet4\"",
+					" \"Sheet5\""
 				]
 			}
 		},
