@@ -141,7 +141,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"dsSheetName": {
-													"value": "@item().variables('SheetName')",
+													"value": "@variables('SheetName')",
 													"type": "Expression"
 												}
 											}
@@ -153,7 +153,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"TableName": {
-													"value": "@item().variables('SheetName')",
+													"value": "@variables('SheetName')",
 													"type": "Expression"
 												}
 											}
