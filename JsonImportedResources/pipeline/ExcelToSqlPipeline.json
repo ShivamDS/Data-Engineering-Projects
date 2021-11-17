@@ -106,15 +106,12 @@
 							"inputs": [
 								{
 									"referenceName": "ExcelCopyDS",
-									"type": "DatasetReference",
-									"parameters": {
-										"Sheetname": "@item"
-									}
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "SinlSinkdb",
+									"referenceName": "Sinkdb",
 									"type": "DatasetReference",
 									"parameters": {
 										"tablename": ", \"Sheet2\", \"Sheet3\", \"Sheet4\", \"Sheet5\""
