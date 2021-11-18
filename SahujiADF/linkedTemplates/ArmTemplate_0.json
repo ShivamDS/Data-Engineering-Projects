@@ -442,7 +442,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"items": {
-								"value": "@variables('SheetName')",
+								"value": "@variables('x')",
 								"type": "Expression"
 							},
 							"activities": [
@@ -488,7 +488,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"dsSheetName": {
-													"value": "@item().variables('SheetName').value",
+													"value": "@item()",
 													"type": "Expression"
 												}
 											}
@@ -500,7 +500,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"TableName": {
-													"value": "@item().variables('SheetName').value",
+													"value": "@item()",
 													"type": "Expression"
 												}
 											}
@@ -567,7 +567,7 @@
 					"cancelAfter": {}
 				},
 				"variables": {
-					"SheetName": {
+					"x": {
 						"type": "Array",
 						"defaultValue": [
 							"Sheet1",
