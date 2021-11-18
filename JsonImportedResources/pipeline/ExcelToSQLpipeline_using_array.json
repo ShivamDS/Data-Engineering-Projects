@@ -7,7 +7,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Set variable1",
+						"activity": "Copy data3",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -62,7 +62,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"dsSheetName": {
-											"value": "@item().variables('x')",
+											"value": "@item()",
 											"type": "Expression"
 										}
 									}
@@ -74,7 +74,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"TableName": {
-											"value": "@item().variables('x')",
+											"value": "@item()",
 											"type": "Expression"
 										}
 									}
@@ -132,34 +132,18 @@
 						"type": "DatasetReference"
 					}
 				]
-			},
-			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "Copy data3",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "x",
-					"value": [
-						"Sheet1",
-						"Sheet2",
-						"Sheet3",
-						"Sheet4",
-						"Sheet5"
-					]
-				}
 			}
 		],
 		"variables": {
 			"x": {
-				"type": "Array"
+				"type": "Array",
+				"defaultValue": [
+					"Sheet1",
+					"Sheet2",
+					"Sheet3",
+					"Sheet4",
+					"Sheet5"
+				]
 			}
 		},
 		"annotations": []
