@@ -62,7 +62,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"dsSheetName": {
-											"value": "@item().SheetName",
+											"value": "@item().variables('SheetName').value",
 											"type": "Expression"
 										}
 									}
@@ -74,7 +74,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"TableName": {
-											"value": "@item().SheetName",
+											"value": "@item().variables('SheetName').value",
 											"type": "Expression"
 										}
 									}
@@ -97,8 +97,41 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableStaging": false
-				}
+					"source": {
+						"type": "ExcelSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "PreCopyExcelSourceDS",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SinkPreCopySqlDS",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"variables": {
