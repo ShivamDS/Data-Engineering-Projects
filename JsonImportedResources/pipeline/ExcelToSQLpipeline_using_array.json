@@ -62,7 +62,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"dsSheetName": {
-											"value": "@item().variables('SheetName').value",
+											"value": "@item().variables('SheetName')",
 											"type": "Expression"
 										}
 									}
@@ -74,7 +74,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"TableName": {
-											"value": "@item().variables('SheetName').value",
+											"value": "@item().variables('SheetName')",
 											"type": "Expression"
 										}
 									}
@@ -136,14 +136,8 @@
 		],
 		"variables": {
 			"SheetName": {
-				"type": "Array",
-				"defaultValue": [
-					"Sheet1",
-					"Sheet2",
-					"Sheet3",
-					"Sheet4",
-					"Sheet5"
-				]
+				"type": "String",
+				"defaultValue": "'Sheet2'"
 			}
 		},
 		"annotations": []
