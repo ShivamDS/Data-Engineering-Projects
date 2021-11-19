@@ -1,0 +1,9 @@
+{
+	"name": "abcs",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2ee83256-747c-4f06-9f28-bd8737bf8044",
+		"tenantId": "02aa9fc1-18bc-4798-a020-e01c854dd434"
+	}
+}
